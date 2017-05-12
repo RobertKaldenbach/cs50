@@ -3,29 +3,38 @@
 
 int main(void)
 {
-    
+    //Prompt User for Integer and Validate u
     int height;
     do
     {
     printf("Height:");
     height = get_int();
-    } while(height <1 || height >23);
+    } while(height <0 || height >23);
     
     int space = height -1;
-    int block;
-    for(block=1;block<=1;block=block+1)
+    int block = 1;
+    for(block=0;block<height;block=block+1)
     {
-        int i;
+       int i;
         for(i=0;i<space;i=i+1)
         {
             printf(" ");
         }
         
+    
         int b;
-        for(b=1;b<0;b=b-1)
+        for(b=0;b<=block;b=b+1)
         {
             printf("#");
         }
-        
+        printf("  ");
+             for(b=0;b<=block;b=b+1)
+        {
+            printf("#");
+        }
+        printf("\n");
+        space = space-1;
+
     }
+
 }
