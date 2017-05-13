@@ -2,11 +2,15 @@
 #include <cs50.h>
 
 int main(void)
-{
+{   int time;
+
+    //Prompt User for Minutes in Shower
     printf("Minutes :");
-        int time;
         time = get_int();
-        int water = time*12;
+
+    //Calculate Water Usage
+    int water = time*12;
+
+    //print number of bottles used
     printf("Bottles:  %i",water);
-    //printf("%i",water);
 }
